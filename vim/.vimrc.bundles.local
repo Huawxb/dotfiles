@@ -1,0 +1,5 @@
+" CtrlSF to search all file
+Bundle 'dyng/ctrlsf.vim'
+
+" Vim plugin for Livedown
+Bundle 'shime/vim-livedown'
