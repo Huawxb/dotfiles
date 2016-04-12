@@ -110,6 +110,7 @@ inoremap <C-t>     <Esc>:enew<CR>
 " !WORKAROUND! Switch tab with ctrl + j or k cause its not support in tmux
 nnoremap <C-j> :bprevious<CR>
 nnoremap <C-k> :bnext<CR>
+nnoremap <C-l> :bnext<CR>
 
 " CtrlSF config
 nmap     <C-F>f <Plug>CtrlSFPrompt
@@ -120,7 +121,10 @@ nmap     <C-F>p <Plug>CtrlSFPwordPath
 nnoremap <C-F>o :CtrlSFOpen<CR>
 nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
-let g:ctrlsf_default_root = 'project'
+"let g:ctrlsf_default_root = 'project'
+
+" 默认忽略 node_modules
+let g:ctrlsf_ignore_dir = ["node_modules", "bower_components"]
 
 " delete without yanking
 nnoremap d "_d
@@ -146,33 +150,33 @@ let g:livedown_autorun = 1
 let g:livedown_open = 1
 
 "##### auto fcitx  ###########
-let g:input_toggle = 1
-function! Fcitx2en()
-   let s:input_status = system("fcitx-remote")
-   if s:input_status == 2
-      let g:input_toggle = 1
-      let l:a = system("fcitx-remote -c")
-   endif
-endfunction
+"let g:input_toggle = 1
+"function! Fcitx2en()
+   "let s:input_status = system("fcitx-remote")
+   "if s:input_status == 2
+      "let g:input_toggle = 1
+      "let l:a = system("fcitx-remote -c")
+   "endif
+"endfunction
 
-function! Fcitx2zh()
-   let s:input_status = system("fcitx-remote")
-   if s:input_status != 2 && g:input_toggle == 1
-      let l:a = system("fcitx-remote -o")
-      let g:input_toggle = 0
-   endif
-endfunction
+"function! Fcitx2zh()
+   "let s:input_status = system("fcitx-remote")
+   "if s:input_status != 2 && g:input_toggle == 1
+      "let l:a = system("fcitx-remote -o")
+      "let g:input_toggle = 0
+   "endif
+"endfunction
 
 set ttimeoutlen=150
-"退出插入模式
-autocmd InsertLeave * call Fcitx2en()
-"进入插入模式
-autocmd InsertEnter * call Fcitx2zh()
-" FIXME workaround for vim in tmux with ctrl+c
-inoremap <C-c> <Esc>
-" Timeout 
-:set timeout timeoutlen=1000 ttimeoutlen=100
-"##### auto fcitx end ######
+""退出插入模式
+"autocmd InsertLeave * call Fcitx2en()
+""进入插入模式
+"autocmd InsertEnter * call Fcitx2zh()
+"" FIXME workaround for vim in tmux with ctrl+c
+"inoremap <C-c> <Esc>
+"" Timeout 
+":set timeout timeoutlen=1000 ttimeoutlen=100
+""##### auto fcitx end ######
 
 " Shift + jkhl will go one window left, etc.
 nmap <S-h> :wincmd h<CR>

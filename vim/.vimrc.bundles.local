@@ -3,3 +3,6 @@ Bundle 'dyng/ctrlsf.vim'
 
 " Vim plugin for Livedown
 Bundle 'shime/vim-livedown'
+
+" Vim fcitx
+Bundle 'vim-scripts/fcitx.vim'
