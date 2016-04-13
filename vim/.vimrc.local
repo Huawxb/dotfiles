@@ -1,39 +1,39 @@
 
-" color and themes
+" Color and themes
 let g:solarized_termcolors=16
 color solarized
 let g:airline_theme = 'powerlineish'
 
-" enable solarized theme
+" Enable solarized theme
 " syntax enable
 " set background=dark
 " colorscheme solarized
 
-" configure airline interface
+" Configure airline interface
 let g:airline#extensions#tabline#enabled = 1
-fdsa发达所发生范德萨发是的let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
-let g:airline_section_发生的范德萨b = '%{getcwd()}'
-let g:airline_section_c = '%t'发达所发生的斤斤计较间距
+let g:airline_section_b = '%{getcwd()}'
+let g:airline_section_c = '%t'
 
-" fix airline font
+" Fix airline font
 let g:airline_powerline_fonts = 1
-if !exists('g:airline_symbols')发达是发的谁
-    let g:airline_symbols = {}发大水范德萨
+if !exists('g:airline_symbols')
+    let g:airline_symbols = {}
 endif
 let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
 let g:airline_right_sep = '«'
 let g:airline_right_sep = '◀'
 let g:airline_symbols.linenr = '␊'
-let g:airline_symbols.linenr = '␤'发达所发生的
+let g:airline_symbols.linenr = '␤'
 let g:airline_symbols.linenr = '¶'
 let g:airline_symbols.branch = '⎇'
 let g:airline_symbols.paste = 'ρ'
-let g:airline_symbols.paste = 'þ'
+let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
-let g:airline_symbols.whitespace = 'ξ'
+let g:airline_symbols.whitespace = 'Ξ'
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
@@ -42,85 +42,85 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 let g:airline_symbols.linenr = ''
 
-" dont save .swp file
+" Dont save .swp file
 set nobackup
 
-" automatically use the system clipboard for copy and paste.
+" Automatically use the system clipboard for copy and paste.
 set clipboard=unnamedplus
 
-" enables mouse in all modes to scroll in tmux
+" Enables mouse in all modes to scroll in tmux
 set mouse=a
 
-" highlight all search matches
+" Highlight all search matches
 :set hlsearch
 
-" press space to turn off highlighting and clear any message already displayed.
-:nnoremap <silent> <space> :nohlsearch<bar>:echo<cr>
+" Press Space to turn off highlighting and clear any message already displayed.
+:nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 " search for visually selected text
-vnoremap // y/<c-r>"
+vnoremap // y/<C-R>"
 
-" using standard editor shortcuts in vim
+" Using standard editor shortcuts in Vim
 
 set nu
-:map <c-a> gvgg
-":map <c-n> :enew
-:map <c-o> :e . <enter>
-:map <c-s> :w <enter>
-":map <c-c> y
-:map <c-v> p
-:map <c-x> <delete>
-:map <c-z> u
-":map <c-t> :tabnew <enter>
-:map <c-i> >>
-:map <c-q> :q! <enter>
-:map <c-w> :bp <bar> bd! #<enter>
-":map <c-f> /
-:map <f3> n
-:map <c-h> :%s/
-:map <s-t> vat
-:map <s-t> vit
-:map <s-{> vi{
-:map <s-(> vi(
-:map <s-[> vi[
+:map <C-a> GVgg
+":map <C-n> :enew
+:map <C-o> :e . <Enter>
+:map <C-s> :w <Enter>
+":map <C-c> y
+:map <C-v> p
+:map <C-x> <Delete>
+:map <C-z> u
+":map <C-t> :tabnew <Enter>
+:map <C-i> >>
+:map <C-q> :q! <Enter>
+:map <C-w> :bp <BAR> bd! #<Enter>
+":map <C-f> /
+:map <F3> n
+:map <C-h> :%s/
+:map <S-t> vat
+:map <S-T> vit
+:map <S-{> vi{
+:map <S-(> vi(
+:map <S-[> vi[
 
-" nerdtree config
-let nerdtreeshowhidden=1
-let nerdtreequitonopen=0
+" NerdTree config
+let NERDTreeShowHidden=1
+let NERDTreeQuitOnOpen=0
 
-" nerdtree-tabs config
-map <leader>n <plug>nerdtreetabstoggle<cr>
+" NerdTree-tabs config
+map <Leader>n <plug>NERDTreeTabsToggle<CR>
 let g:nerdtree_tabs_open_on_console_startup=1
 let g:nerdtree_tabs_open_on_gui_startup=1
 let g:nerdtree_tabs_open_on_new_tab=1
 
 
-" tab two spaces
+" Tab two spaces
 set tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab
 
-" tab navigation like firefox.
-nnoremap <c-s-tab> :bprevious<cr>
-nnoremap <c-tab>   :bnext<cr>
-nnoremap <c-t>     :enew<cr>
-inoremap <c-s-tab> <esc>:bprevious<cr>i
-inoremap <c-tab>   <esc>:bnext<cr>i
-inoremap <c-t>     <esc>:enew<cr>
+" Tab navigation like Firefox.
+nnoremap <C-S-tab> :bprevious<CR>
+nnoremap <C-tab>   :bnext<CR>
+nnoremap <C-t>     :enew<CR>
+inoremap <C-S-tab> <Esc>:bprevious<CR>i
+inoremap <C-tab>   <Esc>:bnext<CR>i
+inoremap <C-t>     <Esc>:enew<CR>
 
 
-" !workaround! switch tab with ctrl + j or k cause its not support in tmux
-nnoremap <c-j> :bprevious<cr>
-nnoremap <c-k> :bnext<cr>
-nnoremap <c-l> :bnext<cr>
+" !WORKAROUND! Switch tab with ctrl + j or k cause its not support in tmux
+nnoremap <C-j> :bprevious<CR>
+nnoremap <C-k> :bnext<CR>
+nnoremap <C-l> :bnext<CR>
 
-" ctrlsf config
-nmap     <c-f>f <plug>ctrlsfprompt
-vmap     <c-f>f <plug>ctrlsfvwordpath
-vmap     <c-f>f <plug>ctrlsfvwordexec
-nmap     <c-f>n <plug>ctrlsfcwordpath
-nmap     <c-f>p <plug>ctrlsfpwordpath
-nnoremap <c-f>o :ctrlsfopen<cr>
-nnoremap <c-f>t :ctrlsftoggle<cr>
-inoremap <c-f>t <esc>:ctrlsftoggle<cr>
+" CtrlSF config
+nmap     <C-F>f <Plug>CtrlSFPrompt
+vmap     <C-F>f <Plug>CtrlSFVwordPath
+vmap     <C-F>F <Plug>CtrlSFVwordExec
+nmap     <C-F>n <Plug>CtrlSFCwordPath
+nmap     <C-F>p <Plug>CtrlSFPwordPath
+nnoremap <C-F>o :CtrlSFOpen<CR>
+nnoremap <C-F>t :CtrlSFToggle<CR>
+inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 "let g:ctrlsf_default_root = 'project'
 
 " 默认忽略 node_modules
@@ -132,15 +132,15 @@ vnoremap d "_d
 
 " replace currently selected text with default register
 " without yanking it
-vnoremap p "_dp
+vnoremap p "_dP
 
-" mappings to move lines
-nnoremap <a-j> :m .+1<cr>==
-nnoremap <a-k> :m .-2<cr>==
-inoremap <a-j> <esc>:m .+1<cr>==gi
-inoremap <a-k> <esc>:m .-2<cr>==gi
-vnoremap <a-j> :m '>+1<cr>gv=gv
-vnoremap <a-k> :m '<-2<cr>gv=gv
+" Mappings to move lines
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
 
 
 " should markdown preview get shown automatically upon opening markdown buffer
@@ -150,11 +150,11 @@ let g:livedown_autorun = 1
 let g:livedown_open = 1
 
 "##### auto fcitx  ###########
-" vim insertleave event doesn't occur when using ctrl-c instead of esc
-:ino <c-c> <esc>
+" Vim InsertLeave event doesn't occur when using CTRL-C instead of ESC
+:ino <C-C> <Esc>
 
 let g:input_toggle = 1
-function! fcitx2en()
+function! Fcitx2en()
    let s:input_status = system("fcitx-remote")
    if s:input_status == 2
       let g:input_toggle = 1
@@ -162,7 +162,7 @@ function! fcitx2en()
    endif
 endfunction
 
-function! fcitx2zh()
+function! Fcitx2zh()
    let s:input_status = system("fcitx-remote")
    if s:input_status != 2 && g:input_toggle == 1
       let l:a = system("fcitx-remote -o")
@@ -171,11 +171,12 @@ function! fcitx2zh()
 endfunction
 
 set timeoutlen=100
-autocmd insertleave * call fcitx2en()
-autocmd insertenter * call fcitx2zh()
+autocmd InsertLeave * call Fcitx2en()
+autocmd InsertEnter * call Fcitx2zh()
 "##### auto fcitx end ######
-" shift + jkhl will go one window left, etc.
-nmap <s-h> :wincmd h<cr>
-nmap <s-j> :wincmd j<cr>
-nmap <s-k> :wincmd k<cr>
-nmap <s-l> :wincmd l<cr>法撒旦
+
+" Shift + jkhl will go one window left, etc.
+nmap <S-h> :wincmd h<CR>
+nmap <S-j> :wincmd j<CR>
+nmap <S-k> :wincmd k<CR>
+nmap <S-l> :wincmd l<CR>法撒旦
