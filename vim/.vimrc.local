@@ -122,6 +122,7 @@ nnoremap <C-F>o :CtrlSFOpen<CR>
 nnoremap <C-F>t :CtrlSFToggle<CR>
 inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 "let g:ctrlsf_default_root = 'project'
+let g:ctrlsf_confirm_save = 0
 
 " 默认忽略 node_modules
 let g:ctrlsf_ignore_dir = ["node_modules", "bower_components"]
@@ -170,13 +171,20 @@ function! Fcitx2zh()
    endif
 endfunction
 
-set timeoutlen=100
-autocmd InsertLeave * call Fcitx2en()
-autocmd InsertEnter * call Fcitx2zh()
+"set timeoutlen=500
+"autocmd InsertLeave * call Fcitx2en()
+"autocmd InsertEnter * call Fcitx2zh()
 "##### auto fcitx end ######
+
+" Remove ctrl + space
+imap <Nul> <Space>
+map  <Nul> <Nop>
+vmap <Nul> <Nop>
+cmap <Nul> <Nop>
+nmap <Nul> <Nop>
 
 " Shift + jkhl will go one window left, etc.
 nmap <S-h> :wincmd h<CR>
 nmap <S-j> :wincmd j<CR>
 nmap <S-k> :wincmd k<CR>
-nmap <S-l> :wincmd l<CR>法撒旦
+nmap <S-l> :wincmd l<CR>
