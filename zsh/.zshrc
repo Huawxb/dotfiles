@@ -96,4 +96,7 @@ export TERM=xterm-256color
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 
 # Autojump
-. /etc/profile.d/autojump.sh
+#. /etc/profile.d/autojump.sh
+
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh  ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+

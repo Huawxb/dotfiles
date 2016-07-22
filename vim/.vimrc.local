@@ -46,7 +46,8 @@ let g:airline_symbols.linenr = ''
 set nobackup
 
 " Automatically use the system clipboard for copy and paste.
-set clipboard=unnamedplus
+" Now useless for new version of vim
+"set clipboard=unnamedplus
 
 " Enables mouse in all modes to scroll in tmux
 set mouse=a
