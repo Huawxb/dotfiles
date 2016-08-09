@@ -6,3 +6,6 @@ Bundle 'shime/vim-livedown'
 
 " Vim fcitx
 "Bundle 'vim-scripts/fcitx.vim'
+
+" Generate JSDoc to your JavaScript code.
+Bundle 'heavenshell/vim-jsdoc'

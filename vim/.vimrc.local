@@ -189,3 +189,19 @@ nmap <S-h> :wincmd h<CR>
 nmap <S-j> :wincmd j<CR>
 nmap <S-k> :wincmd k<CR>
 nmap <S-l> :wincmd l<CR>
+
+" pangloss/vim-javascript configuration
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
+set foldmethod=indent
+
+" Fix iterm2
+if has("multi_byte")
+  if &termencoding == ""
+    let &termencoding = &encoding
+  endif
+  set encoding=utf-8
+  setglobal fileencoding=utf-8
+  "setglobal bomb
+  set fileencodings=ucs-bom,utf-8,latin1
+endif

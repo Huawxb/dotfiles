@@ -98,7 +98,14 @@ export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/us
 # Autojump
 
 # Linux
-. /etc/profile.d/autojump.sh
+#. /etc/profile.d/autojump.sh
 
 # MacOS
-#[[ -s $(brew --prefix)/etc/profile.d/autojump.sh  ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+[[ -s $(brew --prefix)/etc/profile.d/autojump.sh  ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+
+export NVM_DIR="$HOME/.nvm"
+. "$(brew --prefix nvm)/nvm.sh"
+
+# UTF8
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
