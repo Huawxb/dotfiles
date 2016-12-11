@@ -7,11 +7,12 @@
 #
 
 if [[ `uname` == 'Darwin' ]] then
-  proxychains4 -f /usr/local/Cellar/proxychains-ng/4.11/etc/proxychains.conf "$@"
+  proxychains4 -f ./avpn.conf "$@"
 fi
 
 if [[ `uname` == 'Linux' ]] then
-  proxychains4 -f /etc/proxychains.conf "$@"
+  proxychains4 -f ./avpn.conf "$@"
 fi
 
 exit 0
+

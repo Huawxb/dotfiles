@@ -10,5 +10,3 @@ atom.symlink/themes
 git/gitconfig.local.symlink
 
 tmux/.tmux/plugins/
-bin/alivpn.conf
-bin/a
