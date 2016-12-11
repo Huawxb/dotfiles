@@ -1,13 +1,20 @@
+" Get OS name
+let s:uname = system("uname -s")
 
 " Color and themes
-let g:solarized_termcolors=16
-color solarized
-let g:airline_theme = 'powerlineish'
-
-" Enable solarized theme
-" syntax enable
-" set background=dark
-" colorscheme solarized
+if match(s:uname, "Darwin") == 0
+  "syntax enable
+  "set background=dark
+  "colorscheme solarized
+elseif match(s:uname, "Linux") == 0
+  "syntax enable
+  let g:solarized_termcolors=16
+  color solarized
+  let g:airline_theme = 'powerlineish'
+  " syntax enable
+  " set background=dark
+  " colorscheme solarized
+endif
 
 " Configure airline interface
 let g:airline#extensions#tabline#enabled = 1
@@ -62,7 +69,6 @@ set mouse=a
 vnoremap // y/<C-R>"
 
 " Using standard editor shortcuts in Vim
-
 set nu
 :map <C-a> GVgg
 ":map <C-n> :enew
@@ -144,12 +150,11 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
-
 " should markdown preview get shown automatically upon opening markdown buffer
-let g:livedown_autorun = 1
+"let g:livedown_autorun = 1
 
 " should the browser window pop-up upon previewing
-let g:livedown_open = 1
+"let g:livedown_open = 1
 
 "##### auto fcitx  ###########
 " Vim InsertLeave event doesn't occur when using CTRL-C instead of ESC
@@ -194,6 +199,7 @@ nmap <S-l> :wincmd l<CR>
 let g:javascript_plugin_jsdoc = 1
 let g:javascript_plugin_flow = 1
 set foldmethod=indent
+:set foldmethod=indent
 
 " Fix iterm2
 if has("multi_byte")
@@ -205,3 +211,17 @@ if has("multi_byte")
   "setglobal bomb
   set fileencodings=ucs-bom,utf-8,latin1
 endif
+
+" vim-jodoc
+let g:jsdoc_enable_es6 = 1
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+"let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'

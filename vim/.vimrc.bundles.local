@@ -9,3 +9,9 @@ Bundle 'shime/vim-livedown'
 
 " Generate JSDoc to your JavaScript code.
 Bundle 'heavenshell/vim-jsdoc'
+
+" Js formater
+Plugin 'maksimr/vim-jsbeautify'
+
+" JSX
+Plugin 'mxw/vim-jsx'

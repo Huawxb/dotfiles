@@ -95,17 +95,21 @@ export TERM=xterm-256color
 # Node path fix
 export NODE_PATH=/usr/lib/nodejs:/usr/lib/node_modules:/usr/share/javascript:/usr/local/lib/node_modules
 
-# Autojump
+if [[ `uname` == 'Linux' ]] then
 
-# Linux
-#. /etc/profile.d/autojump.sh
+  # Autojump
+  . /etc/profile.d/autojump.sh
+fi
+if [[ `uname` == 'Darwin' ]] then
 
-# MacOS
-[[ -s $(brew --prefix)/etc/profile.d/autojump.sh  ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
+  # Autojump
+  [[ -s $(brew --prefix)/etc/profile.d/autojump.sh  ]] && . $(brew --prefix)/etc/profile.d/autojump.sh
 
-export NVM_DIR="$HOME/.nvm"
-. "$(brew --prefix nvm)/nvm.sh"
+  # UTF8
+  export LC_ALL=en_US.UTF-8
+  export LANG=en_US.UTF-8
 
-# UTF8
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+  eval "$(rbenv init -)"
+fi
+
+
