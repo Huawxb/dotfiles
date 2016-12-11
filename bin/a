@@ -6,13 +6,6 @@
 # modified : 2016 Jul 02
 #
 
-if [[ `uname` == 'Darwin' ]]; then
-  proxychains4 -f ./avpn.conf "$@"
-fi
+proxychains4 -f ~/bin/avpn.conf "$@"
 
-if [[ `uname` == 'Linux' ]]; then
-  proxychains4 -f ./avpn.conf "$@"
-fi
-
-exit 0
 
