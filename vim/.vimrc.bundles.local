@@ -13,5 +13,8 @@ Bundle 'heavenshell/vim-jsdoc'
 " Js formater
 Plugin 'maksimr/vim-jsbeautify'
 
+" editorconfig
+Plugin 'editorconfig/editorconfig-vim'
+
 " JSX
 Plugin 'mxw/vim-jsx'

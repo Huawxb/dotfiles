@@ -116,7 +116,7 @@ inoremap <C-t>     <Esc>:enew<CR>
 
 " !WORKAROUND! Switch tab with ctrl + j or k cause its not support in tmux
 nnoremap <C-j> :bprevious<CR>
-nnoremap <C-k> :bnext<CR>
+nnoremap <C-k> :bnext <CR> :bnext <CR> :bprevious<CR>
 nnoremap <C-l> :bnext<CR>
 
 " CtrlSF config
@@ -223,5 +223,5 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
-"let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exe = '$(npm bin)/eslint'
