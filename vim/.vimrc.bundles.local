@@ -17,4 +17,13 @@ Plugin 'maksimr/vim-jsbeautify'
 Plugin 'editorconfig/editorconfig-vim'
 
 " JSX
-Plugin 'mxw/vim-jsx'
+"Plugin 'mxw/vim-jsx'
+
+" JAVA
+Plugin 'artur-shaik/vim-javacomplete2'
+
+" Android
+Plugin 'hsanson/vim-android'
+
+" intellivim
+"Plugin 'dhleong/intellivim'
