@@ -27,3 +27,11 @@ Plugin 'hsanson/vim-android'
 
 " intellivim
 "Plugin 'dhleong/intellivim'
+
+" vim-vebugger
+Plugin 'idanarye/vim-vebugger'
+Plugin 'Shougo/vimproc.vim'
+
+" oc
+Plugin 'b4winckler/vim-objc'
+Plugin 'eraserhd/vim-ios'

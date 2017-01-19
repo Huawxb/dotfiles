@@ -113,6 +113,8 @@ autocmd FileType javascript setlocal tabstop=2 softtabstop=2 expandtab shiftwidt
 autocmd FileType css setlocal tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab
 autocmd FileType less setlocal tabstop=2 softtabstop=2 expandtab shiftwidth=2 smarttab
 autocmd FileType java setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
+autocmd FileType xml setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
+autocmd FileType objc setlocal tabstop=4 softtabstop=4 expandtab shiftwidth=4 smarttab
 
 " Tab navigation like Firefox.
 nnoremap <C-S-tab> :bprevious<CR>
@@ -263,6 +265,7 @@ let g:ycm_semantic_triggers =  {
   \   'erlang' : [':'],
   \ }
 let g:UltiSnipsExpandTrigger="<leader><space>"
+let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 " java
 autocmd FileType java set omnifunc=javacomplete#Complete

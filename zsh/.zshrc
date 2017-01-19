@@ -116,3 +116,12 @@ if [[ `uname` == 'Darwin' ]] then
 
 fi
 
+# Android development
+# androidinstall app-debug && androidrun com.example.app MainActivity
+function androidinstall(){
+  adb install -r ./bin/$1.apk
+}
+function androidrun(){
+  ant clean debug
+  adb shell am start -n $1/$1.$2
+}
