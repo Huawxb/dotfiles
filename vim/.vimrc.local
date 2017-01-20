@@ -143,7 +143,7 @@ inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
 let g:ctrlsf_confirm_save = 0
 
 " 默认忽略 node_modules
-let g:ctrlsf_ignore_dir = ["node_modules", "bower_components"]
+let g:ctrlsf_ignore_dir = ["node_modules", "bower_components", "dist"]
 
 " delete without yanking
 nnoremap d "_d
@@ -264,9 +264,15 @@ let g:ycm_semantic_triggers =  {
   \   'lua' : ['.', ':'],
   \   'erlang' : [':'],
   \ }
-let g:UltiSnipsExpandTrigger="<leader><space>"
+let g:UltiSnipsExpandTrigger="<leader><leader><space>"
 let g:ycm_global_ycm_extra_conf = '~/.ycm_extra_conf.py'
 
 " java
 autocmd FileType java set omnifunc=javacomplete#Complete
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+
+" ctlrp
+let g:ctrlp_map = '<M-P>'
+let g:ctrlp_mruf_case_sensitive = 0
+nmap <C-p> :CtrlPMixed<CR>
+

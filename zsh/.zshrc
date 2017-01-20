@@ -125,3 +125,6 @@ function androidrun(){
   ant clean debug
   adb shell am start -n $1/$1.$2
 }
+
+alias markright="open -a /Applications/MarkRight.app"
+
