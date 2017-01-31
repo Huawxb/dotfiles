@@ -34,4 +34,10 @@ Plugin 'Shougo/vimproc.vim'
 
 " oc
 Plugin 'b4winckler/vim-objc'
-Plugin 'eraserhd/vim-ios'
+"Plugin 'eraserhd/vim-ios'
+
+" NERDTree git support
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+
+" Toggle the width of the NERDTree window
+Plugin 'vim-scripts/Toggle-NERDTree-width'

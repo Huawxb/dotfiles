@@ -276,3 +276,23 @@ let g:ctrlp_map = '<M-P>'
 let g:ctrlp_mruf_case_sensitive = 0
 nmap <C-p> :CtrlPMixed<CR>
 
+" Reload
+set autoread
+au CursorHold * checktime
+
+" Objective-c configuration
+autocmd FileType objc :set foldmethod=indent
+autocmd FileType objc :setlocal foldmethod=indent
+
+" NERDTree git support
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
